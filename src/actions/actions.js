@@ -36,14 +36,29 @@ function receivePosts(subreddit, json) {
 }
 
 function fetchPosts(subreddit) {
-var data = {};
-
+  var data = {
+  "demographics": {
+    "id": "string",
+    "members": [
+      {
+        "dateOfBirth": "2016-08-12T05:47:58.299Z",
+        "firstName": "string",
+        "lastName": "string",
+        "relationShip": "string",
+        "tobaccoUse": "string"
+      }
+    ],
+    "zipCode": "string"
+  },
+  "user": {
+    "userId": "string"
+  }
+};
 var ndata = new FormData();
 ndata.append( "json", JSON.stringify( data ) );
-  //http://172.16.138.79:9189/alternatePlans/plans/list/
   return dispatch => {
     dispatch(requestPosts(subreddit))
-    return fetch( `https://api.github.com/users/hadley/repos`)
+    return fetch(`https://api.github.com/users/hadley/repos`)
       .then(response => response.json())
       .then(json => dispatch(receivePosts(subreddit, json)))
   }

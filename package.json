@@ -1,7 +1,7 @@
      
     
 {
-  "name": "redditApi",
+  "name": "react-Api",
   "version": "1.0.0",
   "main": "index.js",
   "private": true,

@@ -6,20 +6,22 @@ export default class Posts extends Component {
       <div className="container-fluid">
         <div className="col-md-12">
         <h1>Header</h1>
+        <hr/>
        </div>
-       
-        
-        <div className="col-md-2 navbar-default navbar-static-side">
+        <div className="col-md-2">
         <h2>Nav</h2>
+        <section className=" navbar-default navbar-static-side">
         <img src=" http://dummyimage.com/verticalbanner" className="img-responsive"/>
+        </section>
         </div>
         <div className="col-md-10">
+        <h2>Body Content</h2>
         {this.props.posts.map((post, i) =>
     
           <div className="well" key={i}>
-              <h1 className="plan-name">
-                { post.name }
-              </h1>
+              <h4 className="plan-name">
+                <a href="#">{ post.name }</a>
+              </h4>
               <div>
                   <div className="col-md-4 ">
                     <h5>Id</h5>
@@ -48,6 +50,7 @@ export default class Posts extends Component {
         )}
     </div>
        <div className="col-md-12">
+       <hr/>
            <h1>Footer
            </h1>
            </div>
