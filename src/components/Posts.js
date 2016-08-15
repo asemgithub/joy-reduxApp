@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 
+
 export default class Posts extends Component {
   render() {
     return (
@@ -12,6 +13,8 @@ export default class Posts extends Component {
         <h2>Nav</h2>
         <section className=" navbar-default navbar-static-side">
         <img src=" http://dummyimage.com/verticalbanner" className="img-responsive"/>
+        
+        <button class="btn btn-primary" type="submit" >Test</button>
         </section>
         </div>
         <div className="col-md-10">
